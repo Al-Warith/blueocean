@@ -1,10 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('') {
-      steps {
-        build(job: 'pull', quietPeriod: 1)
-      }
+    agent any
+    stages {
+       stage('Upload to AWS') {
+          steps {
+              sh 'echo "uploading content"'
+              }
+          }
+       }
     }
-  }
 }
+             
+               
+           
